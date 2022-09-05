@@ -117,12 +117,11 @@ class SecondWindow(FirstWindow):
         actor = Actor(self.txt.get(), self.txt1.get(), self.txt2.get(), self.txt3.get())
         self.actorList.append(actor.copy())
         file = open("./data.cvs", "a")
-        for x in self.actorList:
-            file.write(f"""
-            Name {x[0]} 
-            salary {x[1]} 
-            role {x[2]} 
-            film {x[3]}
+        file.write(f"""
+            Name {self.txt.get()} 
+            salary {self.txt1.get()} 
+            role {self.txt2.get()} 
+            film {self.txt3.get()}
             """)
         file.close()
 
